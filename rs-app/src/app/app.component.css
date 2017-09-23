@@ -1,0 +1,68 @@
+.title {
+    background-color: gray;
+    height: 100px;
+}
+
+.app-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    padding-left: 20px;
+    background-color: gray;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.logo {
+    height: 60px;
+    padding-left: 20px;
+    float: left;
+}
+
+.card {
+    background-color: gray;
+    height: 100%;
+}
+
+.tag {
+    max-height: 18px;
+    width: 800px;
+    max-width: 1400px;
+    padding: 20px, 20px;
+}
+
+.card-title {
+    font-size: 15px;
+}
+
+.element-card-header {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #788D78;
+    color: whitesmoke;
+}
