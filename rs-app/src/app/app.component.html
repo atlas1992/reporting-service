@@ -7,28 +7,19 @@
 <div class="title"></div>
 <div class="menu">
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#reports">Reports</a></li>
-        <li><a href="#howto">How To</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a (click)="changePage($event)" id="home"><md-icon class="menu-icon">home</md-icon>Home</a></li>
+        <li><a (click)="changePage($event)" id="reports"><md-icon class="menu-icon">reorder</md-icon>Reports</a></li>
+        <li><a><md-icon class="menu-icon">help</md-icon>How To</a></li>
+        <li><a><md-icon class="menu-icon">people</md-icon>About Us</a></li>
+        <div class="login">
+            <md-icon class="login-icon">person</md-icon>
+            <p style="float: right">Chelsea Zhang</p>
+        </div>
+
     </ul>
+
 </div>
 
-<div>
-    <md-card class="element-card-header">
-        <md-card-title class="card-title">Header:</md-card-title>
-        <md-card-subtitle>Report Title</md-card-subtitle>
-        <md-card-content>
-            <p></p>
-            <textarea></textarea>
-        </md-card-content>
-    </md-card>
-    <md-card class="element-card">
-        <md-card-title class="card-title">Paragraph:</md-card-title>
-        <md-card-subtitle>Report Content</md-card-subtitle>
-        <md-card-content>
-            <p></p>
-            <textarea></textarea>
-        </md-card-content>
-    </md-card>
-</div>
+<app-report *ngIf="home"></app-report>
+
+<app-report-editor *ngIf="editor"></app-report-editor>
