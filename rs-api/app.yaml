@@ -1,10 +1,4 @@
 env: flex
 runtime: nodejs
-env_variables:
-  SQL_USER: root
-  SQL_PASSWORD: secret
-  SQL_DATABASE: rsdb
-  NODE_ENV: production
-  # e.g. my-awesome-project:us-central1:my-cloud-sql-instance
-  INSTANCE_CONNECTION_NAME: feisty-beacon-180520:us-east1:reportingservice
+beta_settings:
   cloud_sql_instances: feisty-beacon-180520:us-east1:reportingservice
