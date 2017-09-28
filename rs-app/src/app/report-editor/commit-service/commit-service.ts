@@ -10,7 +10,7 @@ export class CommitService {
     }
 
     public updateReports(r: Report): Promise<object> {
-        const url = 'http://localhost:3000/Reports/';
+        const url = 'https://feisty-beacon-180520.appspot.com/Reports/';
         const reportId = r.ReportId;
         const fullUrl = url + reportId;
         return this.http.put(fullUrl, r)
@@ -19,7 +19,7 @@ export class CommitService {
     }
 
     public addReports(r: Report): Promise<object> {
-        const url = 'http://localhost:3000/Reports/';
+        const url = 'https://feisty-beacon-180520.appspot.com/Reports/';
         const reportId = r.ReportId;
         return this.http.post(url, r)
             .map((response: Response) => response.json())
@@ -27,7 +27,7 @@ export class CommitService {
     }
 
     public deleteReports(r: Report): Promise<object> {
-        const url = 'http://localhost:3000/Reports/';
+        const url = 'https://feisty-beacon-180520.appspot.com/Reports/';
         const reportId = r.ReportId;
         const fullUrl = url + reportId;
         return this.http.delete(fullUrl)

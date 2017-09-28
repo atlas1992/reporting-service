@@ -11,7 +11,7 @@ export class LoginService {
     }
 
     public getUser(username: string): Promise<User[]> {
-        const url = 'http://localhost:3000/Users/';
+        const url = 'https://feisty-beacon-180520.appspot.com/Users/';
         const fullUrl = url + username;
         return this.http.get(url)
             .map((response: Response) => <User[]>response.json())

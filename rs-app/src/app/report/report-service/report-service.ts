@@ -11,7 +11,7 @@ export class ReportService {
     }
 
     public getReports(): Promise<Report[]> {
-        const url = 'http://localhost:3000/Reports';
+        const url = 'https://feisty-beacon-180520.appspot.com/Reports';
         return this.http.get(url)
             .map((response: Response) => <Report[]>response.json())
             .catch(this.handleError).toPromise();
