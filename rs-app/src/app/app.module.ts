@@ -2,18 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule } from '@angular/material';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { ReportComponent } from './report/report.component';
-import { ReportEditorComponent } from './report-editor/report-editor.component';
+import { ReportModule } from './report/report.module';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReportComponent,
-    ReportEditorComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +23,9 @@ import { ReportEditorComponent } from './report-editor/report-editor.component';
     MdCardModule,
     MatSidenavModule,
     MdIconModule,
-    FroalaEditorModule.forRoot(), 
-    FroalaViewModule.forRoot()
+    ReportModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

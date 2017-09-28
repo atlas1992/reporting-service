@@ -1,0 +1,17 @@
+<div style="background-color: whitesmoke; height: 500px;">
+
+  <div id="login-box">
+    <p style="font-size: 30px; margin-bottom: 10px">Login</p>
+      <md-form-field class="example-full-width">
+        <input mdInput placeholder="Username" [(ngModel)]="username">
+      </md-form-field>
+      <md-form-field class="example-full-width">
+        <input mdInput placeholder="Password" type="password" [(ngModel)]="password">
+      </md-form-field>
+      <p style="color: red; margin-top: 2px; font-size: 10px; font-family: Arial" *ngIf="loginFailed">* invalid account</p>
+    <div>
+      <button md-raised-button color="primary" style="margin-top: 20px;" (click)="verifyLogin()">Login</button>
+      <button md-raised-button color="primary" style="margin-left: 20px;">Register</button>
+    </div>
+  </div>
+</div>

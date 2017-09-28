@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   home: boolean;
   editor: boolean;
+  loggedin: boolean;
 
   ngOnInit() {
     this.home = true;
+    this.loggedin = false;
   }
 
   private changePage(e: any) {

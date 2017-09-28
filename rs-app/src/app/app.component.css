@@ -75,3 +75,8 @@ li a:hover {
     float: left;
     font-size: 21px;
 }
+
+.app-content {
+    min-width: 1600px;
+    min-height: 900px;
+}

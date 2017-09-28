@@ -1,18 +1,19 @@
-<div>
-  <md-card class="element-card-header">
-      <md-card-title class="card-title">Header:</md-card-title>
-      <md-card-content>
-          <p></p>
-          <textarea class="header-editor"></textarea>
-      </md-card-content>
-      <button md-raised-button color="primary">Save</button>
-  </md-card>
-  <md-card class="element-card">
-      <md-card-title class="card-title">Paragraph:</md-card-title>
-      <md-card-content>
-          <p></p>
-          <div [froalaEditor]></div>
-      </md-card-content>
-      <button md-raised-button color="primary">Save</button>
-  </md-card>
+<div class="editor-container">
+    <md-card class="element-card-header">
+        <input class="title-input" [(ngModel)]="report.Title" [disabled]="viewing" (keyup)="save(report)">
+
+        <md-card-subtitle style="color: white">{{report.Time}}</md-card-subtitle>
+
+        <hr>
+
+        <md-card-content *ngIf="editing && !viewing">
+            <div [froalaEditor]="options" [(froalaModel)]="report.Content" (keyup)="save(report)"></div>
+            <p *ngIf="saved">Last Saved at {{this.savedTime}}</p>
+            <button md-raised-button color="primary" (click)="save(report)" style="margin-top: 15px;">Save</button>
+        </md-card-content>
+
+        <md-card-content *ngIf="!editing && viewing" [innerHTML]="report.Content">
+        </md-card-content>
+
+    </md-card>
 </div>
