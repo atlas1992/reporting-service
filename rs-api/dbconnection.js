@@ -1,7 +1,7 @@
 var mysql=require('mysql');
 var connection=mysql.createPool({
 
-host:'/cloudsql/feisty-beacon-180520:us-east1:reportingservice',
+host:'104.196.209.109',
 user:'root',
 password:'secret',
 database:'rsdb'
