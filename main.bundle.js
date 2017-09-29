@@ -63,6 +63,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent() {
     }
+    AppComponent.prototype.alertLeaving = function ($event) {
+        return $event.returnValue = '';
+    };
     AppComponent.prototype.ngOnInit = function () {
         this.home = true;
         this.loggedin = false;
@@ -86,6 +89,12 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__report_report_component__["a" /* ReportComponent */]),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__report_report_component__["a" /* ReportComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__report_report_component__["a" /* ReportComponent */]) === "function" && _a || Object)
 ], AppComponent.prototype, "report", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('window:beforeunload', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", String)
+], AppComponent.prototype, "alertLeaving", null);
 AppComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-root',
