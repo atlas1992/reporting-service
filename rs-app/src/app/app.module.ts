@@ -6,13 +6,11 @@ import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIco
 
 import { AppComponent } from './app.component';
 import { ReportModule } from './report/report.module';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
