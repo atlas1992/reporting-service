@@ -3,16 +3,14 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatGridListModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatGridListModule,MatTooltipModule } from '@angular/material';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-
-
 import { ReportComponent } from './report.component';
+import { ReportEditorComponent } from '../report-editor/report-editor.component';
 
 export { Report } from './class/report';
 export { ReportComponent } from './report.component';
 export { ReportService } from './report-service/report-service';
-import { ReportEditorComponent } from '../report-editor/report-editor.component';
 
 @NgModule(
     {
@@ -20,7 +18,7 @@ import { ReportEditorComponent } from '../report-editor/report-editor.component'
             CommonModule,
             HttpModule,
             FormsModule,
-            MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatGridListModule,
+            MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatGridListModule,MatTooltipModule,
             FroalaEditorModule.forRoot(), 
             FroalaViewModule.forRoot()
         ],

@@ -1,12 +1,13 @@
 .report-card {
-    background-color: orange;
+    background-color: #EEEEEE;
     color: #242323;
     width: 200px;
+    height: 101px;
     margin: auto;
-    overflow: auto;
     word-wrap: break-word;
     display: inline-block;
     margin-right:15px;
+    margin-bottom: 3px;
 }
 
 .report-card:hover {
@@ -45,14 +46,8 @@
 
 .top-panel {
     float: top;
-    overflow: auto;
     height: auto;
-    margin-left: 20px;
-}
-
-.button-combo {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 .before-editing {
@@ -60,4 +55,10 @@
     color: #2422B3;
     font-weight: bold;
     font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.add-report-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 50px;
 }

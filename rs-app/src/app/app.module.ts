@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatInputModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdCardModule, MatSidenavModule, MdIconModule, MatInputModule, MatTooltipModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ReportModule } from './report/report.module';
@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     MdIconModule,
     ReportModule,
     MatInputModule,
+    MatTooltipModule,
     FormsModule
   ],
   providers: [],

@@ -24,10 +24,17 @@
                     <a>
                         <md-icon class="menu-icon">people</md-icon>About Us</a>
                 </li>
+
                 <div class="login">
                     <md-icon class="login-icon">person</md-icon>
-                    <p style="float: right">Chelsea Zhang</p>
+                    <p style="float: right">{{username}}</p>
                 </div>
+                <div class="add-button" mdTooltip="Add a new report">
+                        <button md-mini-fab color="warn"(click)="add()">
+                                <md-icon>add circle</md-icon>
+                        </button>
+                </div>
+                
             </ul>
 
         </div>

@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       }
       if(this.loginSuccessful) {
         this.inj.get(AppComponent).loggedin = true;
+        this.inj.get(AppComponent).username = d[0]['username'];
       }
     });
   }

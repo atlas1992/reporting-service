@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ReportService } from './report-service/report-service';
-import { Report } from './report.module';
+import { Report } from './class/report';
 import { CommitService } from '../report-editor/commit-service/commit-service'
 
 @Component({
@@ -37,7 +37,7 @@ export class ReportComponent implements OnInit {
     this.reportEditing = r;
   }
 
-  private add() {
+  add() {
     const r = new Report();
     let id = 0;
     if (this.reports.length !== 0) {
@@ -46,12 +46,7 @@ export class ReportComponent implements OnInit {
       id = 1;
     }
     const d = new Date;
-    r.Time = [d.getMonth() + 1,
-    d.getDate(),
-    d.getFullYear()].join('/') + ' ' +
-      [d.getHours(),
-      d.getMinutes(),
-      d.getSeconds()].join(':');
+    r.Time = d.toLocaleString();
 
     r.Content = '';
     r.Title = '';
@@ -85,12 +80,7 @@ export class ReportComponent implements OnInit {
 
   private save(r: Report) {
     const d = new Date;
-    r.Time = [d.getMonth() + 1,
-    d.getDate(),
-    d.getFullYear()].join('/') + ' ' +
-      [d.getHours(),
-      d.getMinutes(),
-      d.getSeconds()].join(':');
+    r.Time = d.toLocaleString();
     this.commitService.updateReports(r).then(d => {
       if (d['affectedRows'] >= 1) {
       }

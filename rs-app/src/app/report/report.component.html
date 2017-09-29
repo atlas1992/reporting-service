@@ -1,29 +1,23 @@
 <div class="top-panel">
-    <md-card class="report-card" *ngFor="let report of reports">
-        <textarea class="card-header" [(ngModel)]="report.Title" (keyup)="save(report)"></textarea>
-        <md-card-subtitle>{{report.Time}}</md-card-subtitle>
-        <md-card-content flex class="button-combo">
-            <button md-icon-button color="primary" (click)="openReportEditor(report)">
+        <md-card class="report-card" *ngFor="let report of reports">
+            <textarea class="card-header" [(ngModel)]="report.Title" (keyup)="save(report)"></textarea>
+            <md-card-subtitle>{{report.Time}}</md-card-subtitle>
+            <md-card-content flex class="button-combo">
+                <button md-icon-button color="primary" (click)="openReportEditor(report)" mdTooltip="Add">
                 <md-icon class="md-24">create</md-icon>
             </button>
-            <button md-icon-button color="primary" (click)="openReportEditorView(report)">
+                <button md-icon-button color="primary" (click)="openReportEditorView(report)" mdTooltip="View">
                 <md-icon class="md-24">dvr</md-icon>
             </button>
-            <button md-icon-button color="primary" (click)="delete(report)">
+                <button md-icon-button color="primary" (click)="delete(report)" mdTooltip="Remove">
                 <md-icon class="md-24">delete</md-icon>
             </button>
-        </md-card-content>
-    </md-card>
-    <md-card class="add-card">s
-        <md-card-content flex class="button-combo">
-            <button md-fab color="primary" (click)="add()">
-                            <md-icon>add circle</md-icon>
-                    </button>
-        </md-card-content>
-    </md-card>
+            </md-card-content>
+        </md-card>
 
-</div>
-<div class="bottom-panel" style="margin-top: 30px;">
-    <p *ngIf="!editing" class="before-editing"></p>
-    <app-report-editor [editing]="this.editing" [viewing]="this.viewing" [(report)]="this.reportEditing" *ngIf="editing || viewing"></app-report-editor>
-</div>
+    </div>
+    <hr style="margin-top:20px;">
+    <div class="right-panel">
+        <p *ngIf="!editing" class="before-editing"></p>
+        <app-report-editor [editing]="this.editing" [viewing]="this.viewing" [(report)]="this.reportEditing" *ngIf="editing || viewing"></app-report-editor>
+    </div>

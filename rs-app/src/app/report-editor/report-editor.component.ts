@@ -28,12 +28,7 @@ export class ReportEditorComponent implements OnInit {
 
   private save(r: Report) {
     const d = new Date;
-    r.Time = [d.getMonth() + 1,
-    d.getDate(),
-    d.getFullYear()].join('/') + ' ' +
-      [d.getHours(),
-      d.getMinutes(),
-      d.getSeconds()].join(':');
+    r.Time = d.toLocaleString();
     this.commitService.updateReports(r).then(d => {
       if (d['affectedRows'] >= 1) {
         this.saved = true;

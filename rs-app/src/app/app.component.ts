@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ReportComponent } from './report/report.component'
+import { LoginComponent } from './login/login.component'
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,9 @@ export class AppComponent implements OnInit{
   home: boolean;
   editor: boolean;
   loggedin: boolean;
+  username: string;
+
+  @ViewChild(ReportComponent) report: ReportComponent;
 
   ngOnInit() {
     this.home = true;
@@ -23,5 +28,9 @@ export class AppComponent implements OnInit{
       this.editor = false;
       this.home = true;
     }
+  }
+
+  private add() {
+    this.report.add();
   }
 }

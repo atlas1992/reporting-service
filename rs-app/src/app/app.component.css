@@ -77,6 +77,13 @@ li a:hover {
 }
 
 .app-content {
-    min-width: 1600px;
+    min-width: 1550px;
     min-height: 900px;
+}
+
+.add-button {
+    text-align: center;
+    padding-right: 100px;
+    float: right;
+    margin-top: 5px;
 }
