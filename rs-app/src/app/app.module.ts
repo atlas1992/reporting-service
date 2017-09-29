@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ReportModule } from './report/report.module';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     ReportModule,
     MatInputModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { ReportComponent } from './report/report.component'
 import { LoginComponent } from './login/login.component'
 
@@ -14,6 +14,11 @@ export class AppComponent implements OnInit{
   username: string;
 
   @ViewChild(ReportComponent) report: ReportComponent;
+
+  @HostListener('window:beforeunload',['$event'])
+  public alertLeaving($event): string {
+    return $event.returnValue = '';
+  }
 
   ngOnInit() {
     this.home = true;
