@@ -153,7 +153,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__angular_forms__["c" /* FormsModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]],
+        schemas: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]],
     })
 ], AppModule);
 
