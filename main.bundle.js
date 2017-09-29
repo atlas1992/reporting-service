@@ -110,15 +110,13 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__report_report_module__ = __webpack_require__("../../../../../src/app/report/report.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -135,8 +133,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__login_login_component__["a" /* LoginComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -150,7 +147,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__report_report_module__["a" /* ReportModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_material__["b" /* MatInputModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_material__["d" /* MatTooltipModule */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["c" /* FormsModule */]
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["c" /* FormsModule */]
         ],
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
@@ -158,143 +155,6 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/login/login-service/login-service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var LoginService = (function () {
-    function LoginService(http) {
-        this.http = http;
-    }
-    LoginService.prototype.getUser = function (username) {
-        var url = 'https://feisty-beacon-180520.appspot.com/Users/';
-        var fullUrl = url + username;
-        return this.http.get(url)
-            .map(function (response) { return response.json(); })
-            .catch(this.handleError).toPromise();
-    };
-    LoginService.prototype.handleError = function () {
-        console.log('Error fetching users from WebAPI.');
-        var empty = [];
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of(empty);
-    };
-    return LoginService;
-}());
-LoginService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
-], LoginService);
-
-var _a;
-//# sourceMappingURL=login-service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/login/login.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
-// imports
-
-
-// module
-exports.push([module.i, "#login-box{\r\n    position: absolute;\r\n    width: 400px;\r\n    height: 300px;\r\n    z-index: 15;\r\n    top: 50%;\r\n    left: 52.5%;\r\n    margin: -150px 0 0 -150px;\r\n}", "", {"version":3,"sources":["C:/dev/reporting-service/rs-app/src/app/login/login.component.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,aAAa;IACb,cAAc;IACd,YAAY;IACZ,SAAS;IACT,YAAY;IACZ,0BAA0B;CAC7B","file":"login.component.css","sourcesContent":["#login-box{\r\n    position: absolute;\r\n    width: 400px;\r\n    height: 300px;\r\n    z-index: 15;\r\n    top: 50%;\r\n    left: 52.5%;\r\n    margin: -150px 0 0 -150px;\r\n}"],"sourceRoot":""}]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/login/login.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n  <div id=\"login-box\">\n    <p style=\"font-size: 30px; margin-bottom: 10px\">Login</p>\n      <md-form-field class=\"example-full-width\">\n        <input mdInput placeholder=\"Username\" [(ngModel)]=\"username\">\n      </md-form-field>\n      <md-form-field class=\"example-full-width\">\n        <input mdInput placeholder=\"Password\" type=\"password\" [(ngModel)]=\"password\">\n      </md-form-field>\n      <p style=\"color: red; margin-top: 2px; font-size: 10px; font-family: Arial\" *ngIf=\"loginFailed\">* invalid account</p>\n    <div>\n      <button md-raised-button color=\"primary\" style=\"margin-top: 20px;\" (click)=\"verifyLogin()\">Login</button>\n      <button md-raised-button color=\"primary\" style=\"margin-left: 20px;\">Register</button>\n    </div>\n  </div>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/login/login.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_service_login_service__ = __webpack_require__("../../../../../src/app/login/login-service/login-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var LoginComponent = (function () {
-    function LoginComponent(loginService, inj) {
-        this.loginService = loginService;
-        this.inj = inj;
-    }
-    LoginComponent.prototype.ngOnInit = function () {
-    };
-    LoginComponent.prototype.verifyLogin = function () {
-        var _this = this;
-        this.loginService.getUser(this.username).then(function (d) {
-            if (d.length === 1 && d[0]['password'] === _this.password) {
-                _this.loginSuccessful = true;
-            }
-            else {
-                _this.loginFailed = true;
-            }
-            if (_this.loginSuccessful) {
-                _this.inj.get(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]).loggedin = true;
-                _this.inj.get(__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]).username = d[0]['username'];
-            }
-        });
-    };
-    return LoginComponent;
-}());
-LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-login',
-        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__login_service_login_service__["a" /* LoginService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__login_service_login_service__["a" /* LoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__login_service_login_service__["a" /* LoginService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */]) === "function" && _b || Object])
-], LoginComponent);
-
-var _a, _b;
-//# sourceMappingURL=login.component.js.map
 
 /***/ }),
 
@@ -363,101 +223,6 @@ CommitService = __decorate([
 
 var _a;
 //# sourceMappingURL=commit-service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/report-editor/report-editor.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
-// imports
-
-
-// module
-exports.push([module.i, ".card-title {\r\n    font-size: 20px;\r\n    color: white;\r\n    font-weight: bold;\r\n    font-family: \"Helvetica Neue\", \"Lucida Grande\", Helvetica, Arial, Verdana, sans-serif;\r\n    margin-top: .5em;\r\n}\r\n\r\n.element-card-header {\r\n    margin-bottom: 20px;\r\n    background-color: gray;\r\n    color: whitesmoke;\r\n    margin-top: 20px;\r\n}\r\n\r\n.header-editor {\r\n    font-size: 20px;\r\n    height: 25px;\r\n    max-height: 75px;\r\n    resize: vertical;\r\n}\r\n\r\n.element-card {\r\n    background-color: white;\r\n}\r\n\r\n.editor-header {\r\n    font-size: 20px;\r\n    color: #0F0F0F;\r\n    font-weight: bold;\r\n    font-family: \"Helvetica Neue\", \"Lucida Grande\", Helvetica, Arial, Verdana, sans-serif;\r\n    margin-top: 20px;\r\n}\r\n\r\n.element-card:hover {\r\n    box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;\r\n    -webkit-transform: translate3d(0,0,0);\r\n            transform: translate3d(0,0,0);\r\n    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n\r\n.element-card-header:hover {\r\n    box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;\r\n    -webkit-transform: translate3d(0,0,0);\r\n            transform: translate3d(0,0,0);\r\n    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n\r\n.save-button {\r\n    margin-top: 15px;\r\n    float: right;\r\n}\r\n\r\n.title-input {\r\n    border: 0;\r\n    outline: 0;\r\n    background: transparent;\r\n    color: white;\r\n    margin-bottom: 15px;\r\n    font-size: 30px;\r\n    height: 40px;\r\n    width: 100%;\r\n}\r\n\r\n.editor {\r\n    margin-top: 20px;\r\n}\r\n\r\n.editor-container {\r\n    \r\n}\r\n", "", {"version":3,"sources":["C:/dev/reporting-service/rs-app/src/app/report-editor/report-editor.component.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,aAAa;IACb,kBAAkB;IAClB,sFAAsF;IACtF,iBAAiB;CACpB;;AAED;IACI,oBAAoB;IACpB,uBAAuB;IACvB,kBAAkB;IAClB,iBAAiB;CACpB;;AAED;IACI,gBAAgB;IAChB,aAAa;IACb,iBAAiB;IACjB,iBAAiB;CACpB;;AAED;IACI,wBAAwB;CAC3B;;AAED;IACI,gBAAgB;IAChB,eAAe;IACf,kBAAkB;IAClB,sFAAsF;IACtF,iBAAiB;CACpB;;AAED;IACI,gFAAgF;IAChF,sCAA8B;YAA9B,8BAA8B;IAC9B,+FAA+F;CAClG;;AAED;IACI,gFAAgF;IAChF,sCAA8B;YAA9B,8BAA8B;IAC9B,+FAA+F;CAClG;;AAED;IACI,iBAAiB;IACjB,aAAa;CAChB;;AAED;IACI,UAAU;IACV,WAAW;IACX,wBAAwB;IACxB,aAAa;IACb,oBAAoB;IACpB,gBAAgB;IAChB,aAAa;IACb,YAAY;CACf;;AAED;IACI,iBAAiB;CACpB;;AAED;;CAEC","file":"report-editor.component.css","sourcesContent":[".card-title {\r\n    font-size: 20px;\r\n    color: white;\r\n    font-weight: bold;\r\n    font-family: \"Helvetica Neue\", \"Lucida Grande\", Helvetica, Arial, Verdana, sans-serif;\r\n    margin-top: .5em;\r\n}\r\n\r\n.element-card-header {\r\n    margin-bottom: 20px;\r\n    background-color: gray;\r\n    color: whitesmoke;\r\n    margin-top: 20px;\r\n}\r\n\r\n.header-editor {\r\n    font-size: 20px;\r\n    height: 25px;\r\n    max-height: 75px;\r\n    resize: vertical;\r\n}\r\n\r\n.element-card {\r\n    background-color: white;\r\n}\r\n\r\n.editor-header {\r\n    font-size: 20px;\r\n    color: #0F0F0F;\r\n    font-weight: bold;\r\n    font-family: \"Helvetica Neue\", \"Lucida Grande\", Helvetica, Arial, Verdana, sans-serif;\r\n    margin-top: 20px;\r\n}\r\n\r\n.element-card:hover {\r\n    box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;\r\n    transform: translate3d(0,0,0);\r\n    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n\r\n.element-card-header:hover {\r\n    box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;\r\n    transform: translate3d(0,0,0);\r\n    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n\r\n.save-button {\r\n    margin-top: 15px;\r\n    float: right;\r\n}\r\n\r\n.title-input {\r\n    border: 0;\r\n    outline: 0;\r\n    background: transparent;\r\n    color: white;\r\n    margin-bottom: 15px;\r\n    font-size: 30px;\r\n    height: 40px;\r\n    width: 100%;\r\n}\r\n\r\n.editor {\r\n    margin-top: 20px;\r\n}\r\n\r\n.editor-container {\r\n    \r\n}\r\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/report-editor/report-editor.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"editor-container\">\r\n    <md-card class=\"element-card-header\">\r\n        <input class=\"title-input\" [(ngModel)]=\"report.Title\" [disabled]=\"viewing\" (keyup)=\"save(report)\">\r\n\r\n        <md-card-subtitle style=\"color: white\">{{report.Time}}</md-card-subtitle>\r\n\r\n        <hr>\r\n\r\n        <md-card-content *ngIf=\"editing && !viewing\">\r\n            <div [froalaEditor]=\"options\" [(froalaModel)]=\"report.Content\" (keyup)=\"save(report)\"></div>\r\n            <p *ngIf=\"saved\">Last Saved at {{this.savedTime}}</p>\r\n            <button md-raised-button color=\"primary\" (click)=\"save(report)\" style=\"margin-top: 15px;\">Save</button>\r\n        </md-card-content>\r\n\r\n        <md-card-content *ngIf=\"!editing && viewing\" [innerHTML]=\"report.Content\">\r\n        </md-card-content>\r\n\r\n    </md-card>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/report-editor/report-editor.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportEditorComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__report_class_report__ = __webpack_require__("../../../../../src/app/report/class/report.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__commit_service_commit_service__ = __webpack_require__("../../../../../src/app/report-editor/commit-service/commit-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ReportEditorComponent = (function () {
-    function ReportEditorComponent(commitService) {
-        this.commitService = commitService;
-        this.viewing = false;
-        this.options = {
-            htmlExecuteScripts: true
-        };
-    }
-    ReportEditorComponent.prototype.ngOnInit = function () {
-    };
-    ReportEditorComponent.prototype.save = function (r) {
-        var _this = this;
-        var d = new Date;
-        r.Time = d.toLocaleString();
-        this.commitService.updateReports(r).then(function (d) {
-            if (d['affectedRows'] >= 1) {
-                _this.saved = true;
-                _this.savedTime = r.Time;
-            }
-        });
-    };
-    return ReportEditorComponent;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-    __metadata("design:type", Boolean)
-], ReportEditorComponent.prototype, "editing", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__report_class_report__["a" /* Report */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__report_class_report__["a" /* Report */]) === "function" && _a || Object)
-], ReportEditorComponent.prototype, "report", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-    __metadata("design:type", Object)
-], ReportEditorComponent.prototype, "viewing", void 0);
-ReportEditorComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-report-editor',
-        template: __webpack_require__("../../../../../src/app/report-editor/report-editor.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/report-editor/report-editor.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_2__commit_service_commit_service__["a" /* CommitService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__commit_service_commit_service__["a" /* CommitService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__commit_service_commit_service__["a" /* CommitService */]) === "function" && _b || Object])
-], ReportEditorComponent);
-
-var _a, _b;
-//# sourceMappingURL=report-editor.component.js.map
 
 /***/ }),
 
@@ -681,11 +446,10 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_froala_wysiwyg__ = __webpack_require__("../../../../angular-froala-wysiwyg/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__report_component__ = __webpack_require__("../../../../../src/app/report/report.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__report_editor_report_editor_component__ = __webpack_require__("../../../../../src/app/report-editor/report-editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__class_report__ = __webpack_require__("../../../../../src/app/report/class/report.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__class_report__ = __webpack_require__("../../../../../src/app/report/class/report.ts");
 /* unused harmony reexport Report */
 /* unused harmony reexport ReportComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__report_service_report_service__ = __webpack_require__("../../../../../src/app/report/report-service/report-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__report_service_report_service__ = __webpack_require__("../../../../../src/app/report/report-service/report-service.ts");
 /* unused harmony reexport ReportService */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -693,7 +457,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -720,8 +483,7 @@ ReportModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5_angular_froala_wysiwyg__["b" /* FroalaViewModule */].forRoot()
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__report_component__["a" /* ReportComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__report_editor_report_editor_component__["a" /* ReportEditorComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__report_component__["a" /* ReportComponent */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_6__report_component__["a" /* ReportComponent */]
