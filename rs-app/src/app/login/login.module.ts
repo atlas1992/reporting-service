@@ -4,11 +4,11 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LoginComponent } from './Login.component';
+import { LoginComponent } from './login.component';
 
 export { User } from './classes/user';
-export { LoginComponent } from './Login.component';
-export { LoginService } from './Login-service/Login-service';
+export { LoginComponent } from './login.component';
+export { LoginService } from './login-service/login-service';
 
 @NgModule(
     {
